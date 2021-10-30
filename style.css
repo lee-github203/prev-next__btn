@@ -1,0 +1,39 @@
+#container {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-container {
+    width: 400vw;
+    transition: transform 1s;
+}
+
+.slide-box {
+    width: 100vw;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-box img {
+    width: 50%;
+}
+
+.btn {
+    position: absolute;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: gold;
+}
+
+.prev-btn {
+    top: 50%;
+    left: 0;
+}
+
+.next-btn {
+    top: 50%;
+    right: 0;
+}

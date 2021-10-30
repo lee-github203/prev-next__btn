@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div id="container">
+            <div class="slide-container">
+                <div class="slide-box">
+                    <img src="images/spring.jpg" alt="" />
+                </div>
+                <div class="slide-box">
+                    <img src="images/summer.jpg" alt="" />
+                </div>
+                <div class="slide-box">
+                    <img src="images/autumn.jpg" alt="" />
+                </div>
+                <div class="slide-box">
+                    <img src="images/winter.jpg" alt="" />
+                </div>
+            </div>
+
+            <div class="btn prev-btn">
+                <i class="fas fa-chevron-left fa-2x"></i>
+            </div>
+
+            <div class="btn next-btn">
+                <i class="fas fa-chevron-right fa-2x"></i>
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+
+        <script>
+            var nowImg = 1;
+            $(".next-btn").click(function () {
+                $(".slide-container").css("transform", "translateX(-" + nowImg + "00vw)");
+                if (nowImg < 3) {
+                    nowImg += 1;
+                }
+            });
+
+            $(".prev-btn").click(function () {
+                $(".slide-container").css("transform", "translateX(-" + (nowImg - 1) + "00vw)");
+                if (nowImg > 1) {
+                    nowImg -= 1;
+                }
+            });
+        </script>
+    </body>
+</html>
