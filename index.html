@@ -12,6 +12,7 @@
             integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
             crossorigin="anonymous"
         />
+        <script src="main.js" defer></script>
     </head>
     <body>
         <div id="container">
@@ -46,20 +47,20 @@
         ></script>
 
         <script>
-            var nowImg = 1;
-            $(".next-btn").click(function () {
-                $(".slide-container").css("transform", "translateX(-" + nowImg + "00vw)");
-                if (nowImg < 3) {
-                    nowImg += 1;
-                }
-            });
+            // var nowImg = 1;
+            // $(".next-btn").click(function () {
+            //     $(".slide-container").css("transform", "translateX(-" + nowImg + "00vw)");
+            //     if (nowImg < 3) {
+            //         nowImg += 1;
+            //     }
+            // });
 
-            $(".prev-btn").click(function () {
-                $(".slide-container").css("transform", "translateX(-" + (nowImg - 1) + "00vw)");
-                if (nowImg > 1) {
-                    nowImg -= 1;
-                }
-            });
+            // $(".prev-btn").click(function () {
+            //     $(".slide-container").css("transform", "translateX(-" + (nowImg - 1) + "00vw)");
+            //     if (nowImg > 1) {
+            //         nowImg -= 1;
+            //     }
+            // });
         </script>
     </body>
 </html>
